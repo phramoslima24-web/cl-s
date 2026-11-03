@@ -34,6 +34,16 @@ public final class Config {
     public static final ForgeConfigSpec.IntValue SENJU_REGENERATION_LEVEL;
     public static final ForgeConfigSpec.BooleanValue SENJU_FREE_JUTSUS;
 
+    // ---- Hatake / Hozuki / Kaguya ----
+    public static final ForgeConfigSpec.DoubleValue HATAKE_SPEED_BONUS;
+    public static final ForgeConfigSpec.DoubleValue HATAKE_ATTACK_BONUS;
+    public static final ForgeConfigSpec.BooleanValue HOZUKI_WATER_SPEED;
+    public static final ForgeConfigSpec.DoubleValue KAGUYA_ARMOR;
+    public static final ForgeConfigSpec.DoubleValue KAGUYA_TOUGHNESS;
+    public static final ForgeConfigSpec.DoubleValue KAGUYA_KNOCKBACK_RESISTANCE;
+    public static final ForgeConfigSpec.DoubleValue KAGUYA_EXTRA_HEALTH;
+    public static final ForgeConfigSpec.DoubleValue KAGUYA_ATTACK_BONUS;
+
     // ---- Fruto de Chakra ----
     public static final ForgeConfigSpec.IntValue FRUIT_CHAKRA_MAX_BONUS;
     public static final ForgeConfigSpec.IntValue FRUIT_ATTRIBUTE_POINTS;
@@ -93,6 +103,31 @@ public final class Config {
                 .defineInRange("regenerationLevel", 1, 0, 5);
         SENJU_FREE_JUTSUS = b.comment("Ao entrar no cla, coloca Mokuton (Jukai Kotan, Mokujoheki, Mokusatsu Shibari, Sashiki) e Shosen Jutsu direto no livro de jutsus.")
                 .define("freeJutsus", true);
+        b.pop();
+
+        b.push("hatake");
+        HATAKE_SPEED_BONUS = b.comment("Bonus de velocidade de movimento (0.2 = +20%).")
+                .defineInRange("speedBonus", 0.20D, 0.0D, 2.0D);
+        HATAKE_ATTACK_BONUS = b.comment("Dano de ataque extra (lamina de chakra / Presa Branca).")
+                .defineInRange("attackBonus", 4.0D, 0.0D, 100.0D);
+        b.pop();
+
+        b.push("hozuki");
+        HOZUKI_WATER_SPEED = b.comment("Nada muito rapido dentro d'agua (Graca do Golfinho). Respirar na agua e sempre ativo.")
+                .define("waterSpeed", true);
+        b.pop();
+
+        b.push("kaguya");
+        KAGUYA_ARMOR = b.comment("Armadura natural (ossos).")
+                .defineInRange("armor", 8.0D, 0.0D, 30.0D);
+        KAGUYA_TOUGHNESS = b.comment("Dureza de armadura.")
+                .defineInRange("armorToughness", 4.0D, 0.0D, 20.0D);
+        KAGUYA_KNOCKBACK_RESISTANCE = b.comment("Resistencia a empurrao (1.0 = imune).")
+                .defineInRange("knockbackResistance", 0.5D, 0.0D, 1.0D);
+        KAGUYA_EXTRA_HEALTH = b.comment("Vida maxima extra, em pontos (10 = +5 coracoes).")
+                .defineInRange("extraHealth", 10.0D, 0.0D, 1000.0D);
+        KAGUYA_ATTACK_BONUS = b.comment("Dano de ataque extra (Shikotsumyaku).")
+                .defineInRange("attackBonus", 3.0D, 0.0D, 100.0D);
         b.pop();
 
         b.push("chakraFruit");

@@ -4,6 +4,9 @@ import com.narutoclans.addon.Config;
 import com.narutoclans.addon.NarutoClansAddon;
 import com.narutoclans.addon.clan.Clan;
 import com.narutoclans.addon.clan.ClanManager;
+import com.narutoclans.addon.clan.HatakeClan;
+import com.narutoclans.addon.clan.HozukiClan;
+import com.narutoclans.addon.clan.KaguyaClan;
 import com.narutoclans.addon.clan.NamikazeClan;
 import com.narutoclans.addon.clan.OtsutsukiClan;
 import com.narutoclans.addon.clan.SenjuClan;
@@ -36,6 +39,9 @@ public final class CommonEvents {
         NamikazeClan.applyPassive(player, ClanManager.has(player, Clan.NAMIKAZE));
         OtsutsukiClan.secondTick(player, ClanManager.has(player, Clan.OTSUTSUKI));
         SenjuClan.secondTick(player, ClanManager.has(player, Clan.SENJU));
+        HatakeClan.secondTick(player, ClanManager.has(player, Clan.HATAKE));
+        HozukiClan.secondTick(player, ClanManager.has(player, Clan.HOZUKI));
+        KaguyaClan.secondTick(player, ClanManager.has(player, Clan.KAGUYA));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)

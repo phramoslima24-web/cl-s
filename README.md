@@ -1,6 +1,6 @@
 # Narutoto: Clans Addon
 
-Addon para **Narutoto: Ninja World 0.4.1** (Forge 1.20.1) que adiciona três clãs novos: **Namikaze**, **Ōtsutsuki** e **Senju**.
+Addon para **Narutoto: Ninja World 0.4.1** (Forge 1.20.1) que adiciona seis clãs novos: **Namikaze**, **Ōtsutsuki**, **Senju**, **Hatake**, **Hozuki** e **Kaguya**.
 
 > Status: o código foi validado quanto à sintaxe, mas **ainda não foi compilado nem testado dentro do jogo**
 > (o ambiente onde foi escrito não tinha JDK completo nem acesso à internet). Veja "Primeiro teste" abaixo.
@@ -32,7 +32,7 @@ A tela de seleção de ninja do Narutoto é código fechado do mod base, então 
 | Fruto de Chakra | Comer: chakra máximo permanente + pontos de atributo/jutsu |
 | `/narutoclans info` | Mostra seu clã |
 | `/narutoclans kunai` | (Namikaze) recupera a Kunai Hiraishin |
-| `/narutoclans set <jogador> <namikaze\|otsutsuki\|senju>` | (op) força o clã |
+| `/narutoclans set <jogador> <namikaze\|otsutsuki\|senju\|hatake\|hozuki\|kaguya>` | (op) força o clã |
 | `/narutoclans remove <jogador>` | (op) remove do clã do addon |
 | `/narutoclans fruit <jogador>` | (op) aplica os efeitos de um Fruto |
 
@@ -88,3 +88,15 @@ O "clã das mil habilidades", descendente de Asura Ōtsutsuki e fundador de Kono
 * Jutsus colocados no livro de jutsus (e pergaminhos entregues): **Mokuton·Jukai Kotan**, **Mokujoheki**, **Mokusatsu Shibari**, **Sashiki** e **Iryo·Shosen Jutsu**.
 * Passivas: **+20 de vida máxima** (+10 corações), **Regeneração I** constante e regeneração de chakra de **0,5%/s** (tudo em `config/narutoto_clans-common.toml`, seção `senju`).
 * Receita de sobrevivência: papel + 2 troncos de carvalho + muda de carvalho + maçã dourada + esmeralda.
+
+## Clãs Hatake, Hozuki e Kaguya
+
+Todos entram por pergaminho (aba "Narutoto: Clãs") ou `/narutoclans set`. Valores em `config/narutoto_clans-common.toml`.
+
+| Clã | Jutsus/natureza ao entrar | Passivas | Receita |
+|---|---|---|---|
+| Hatake | Raiton + Chidori, Raikyu, Raiju Tsuiga (e pergaminhos) | +20% velocidade, +4 de dano | papel, 2 barras de ferro, para-raios, barra de cobre, diamante |
+| Hozuki | Suiton + Suiro, Suiryudan, Mizuranpa, Suidanha (e pergaminhos) | respira na água, nada rápido (Graça do Golfinho) | papel, estilhaço e cristais de prismarinho, Coração do Mar, balde de água, alga |
+| Kaguya | Doton + Doryu Heki | +8 armadura, +4 dureza, 50% resistência a empurrão, +10 de vida, +3 de dano | papel, 2 blocos de osso, osso, fragmento de netherita, diamante |
+
+Os clãs novos não mexem no chakra máximo, então sair deles não reseta o chakra.

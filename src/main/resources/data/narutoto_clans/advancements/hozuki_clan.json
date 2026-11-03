@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "narutoto_clans:hozuki_clan_scroll"
+    },
+    "title": {
+      "translate": "advancements.narutoto_clans.hozuki_clan.title"
+    },
+    "description": {
+      "translate": "advancements.narutoto_clans.hozuki_clan.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hozuki_clan_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "narutoto:begin"
+}

@@ -117,6 +117,9 @@ public final class ClanManager {
             case NAMIKAZE -> NamikazeClan.onJoin(player);
             case OTSUTSUKI -> OtsutsukiClan.onJoin(player);
             case SENJU -> SenjuClan.onJoin(player);
+            case HATAKE -> HatakeClan.onJoin(player);
+            case HOZUKI -> HozukiClan.onJoin(player);
+            case KAGUYA -> KaguyaClan.onJoin(player);
         }
 
         player.displayClientMessage(Component.translatable("message.narutoto_clans.joined", clan.displayName())

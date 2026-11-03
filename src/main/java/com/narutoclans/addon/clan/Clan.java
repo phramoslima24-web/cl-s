@@ -10,7 +10,10 @@ import java.util.Locale;
 public enum Clan {
     NAMIKAZE("namikaze"),
     OTSUTSUKI("otsutsuki"),
-    SENJU("senju");
+    SENJU("senju"),
+    HATAKE("hatake"),
+    HOZUKI("hozuki"),
+    KAGUYA("kaguya");
 
     public final String id;
     private final ResourceLocation advancement;
