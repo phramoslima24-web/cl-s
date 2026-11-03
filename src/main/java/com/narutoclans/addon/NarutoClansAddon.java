@@ -13,7 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Narutoto: Clans Addon - adiciona os clas Namikaze e Otsutsuki ao mod Narutoto: Ninja World.
+ * Narutoto: Clans Addon - adiciona os clas Namikaze, Otsutsuki e Senju ao mod Narutoto: Ninja World.
  */
 @Mod(NarutoClansAddon.MODID)
 public class NarutoClansAddon {

@@ -40,5 +40,11 @@
   "command.narutoto_clans.set.fail": "Could not set the clan of %s",
   "command.narutoto_clans.remove.ok": "%s left their clan",
   "command.narutoto_clans.remove.none": "%s has no addon clan",
-  "command.narutoto_clans.fruit.ok": "Chakra Fruit effects applied to %s"
+  "command.narutoto_clans.fruit.ok": "Chakra Fruit effects applied to %s",
+  "item.narutoto_clans.senju_clan_scroll": "Senju Clan Scroll",
+  "item.narutoto_clans.senju_clan_scroll.tooltip.1": "Monstrous chakra reserves, great vitality and Mokuton.",
+  "item.narutoto_clans.senju_clan_scroll.tooltip.2": "The clan of a thousand skills: Iryo Ninjutsu, Jukai Kotan and Shosen Jutsu.",
+  "clan.narutoto_clans.senju": "Senju",
+  "advancements.narutoto_clans.senju_clan.title": "Senju Clan",
+  "advancements.narutoto_clans.senju_clan.descr": "Become Senju"
 }

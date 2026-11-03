@@ -1,6 +1,6 @@
 # Narutoto: Clans Addon
 
-Addon para **Narutoto: Ninja World 0.4.1** (Forge 1.20.1) que adiciona dois clãs novos: **Namikaze** e **Ōtsutsuki**.
+Addon para **Narutoto: Ninja World 0.4.1** (Forge 1.20.1) que adiciona três clãs novos: **Namikaze**, **Ōtsutsuki** e **Senju**.
 
 > Status: o código foi validado quanto à sintaxe, mas **ainda não foi compilado nem testado dentro do jogo**
 > (o ambiente onde foi escrito não tinha JDK completo nem acesso à internet). Veja "Primeiro teste" abaixo.
@@ -28,10 +28,11 @@ A tela de seleção de ninja do Narutoto é código fechado do mod base, então 
 |---|---|
 | Pergaminho do Clã Namikaze | Clique direito: entra no clã (só quem ainda não tem clã) |
 | Pergaminho do Clã Ōtsutsuki | Clique direito: entra no clã (só quem ainda não tem clã) |
+| Pergaminho do Clã Senju | Clique direito: entra no clã (só quem ainda não tem clã) |
 | Fruto de Chakra | Comer: chakra máximo permanente + pontos de atributo/jutsu |
 | `/narutoclans info` | Mostra seu clã |
 | `/narutoclans kunai` | (Namikaze) recupera a Kunai Hiraishin |
-| `/narutoclans set <jogador> <namikaze\|otsutsuki>` | (op) força o clã |
+| `/narutoclans set <jogador> <namikaze\|otsutsuki\|senju>` | (op) força o clã |
 | `/narutoclans remove <jogador>` | (op) remove do clã do addon |
 | `/narutoclans fruit <jogador>` | (op) aplica os efeitos de um Fruto |
 
@@ -78,3 +79,12 @@ As teclas B e N podem ser alteradas em Controles (categoria "Narutoto: Clãs") c
    Confirme: advancement "Learn Hiraishin", jutsu no livro, kunai no inventário.
 2. Outro personagem (`/narutoclans set <você> otsutsuki`): confirme chakra, voo, teclas B/N, Karma.
 3. Se algo da integração falhar, o log mostra `Integracao com Narutoto falhou em '...'` com o campo exato.
+
+## Clã Senju
+
+O "clã das mil habilidades", descendente de Asura Ōtsutsuki e fundador de Konoha com os Uchiha.
+
+* Ao entrar: chakra máximo **100.000** (configurável), advancements `narutoto:nature_wood` (Mokuton) e `narutoto:learn_iryo_ninjutsu`.
+* Jutsus colocados no livro de jutsus (e pergaminhos entregues): **Mokuton·Jukai Kotan**, **Mokujoheki**, **Mokusatsu Shibari**, **Sashiki** e **Iryo·Shosen Jutsu**.
+* Passivas: **+20 de vida máxima** (+10 corações), **Regeneração I** constante e regeneração de chakra de **0,5%/s** (tudo em `config/narutoto_clans-common.toml`, seção `senju`).
+* Receita de sobrevivência: papel + 2 troncos de carvalho + muda de carvalho + maçã dourada + esmeralda.

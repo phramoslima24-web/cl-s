@@ -9,7 +9,8 @@ import java.util.Locale;
 /** Clas adicionados por este addon. O cla de um jogador e representado por uma advancement (como no Narutoto). */
 public enum Clan {
     NAMIKAZE("namikaze"),
-    OTSUTSUKI("otsutsuki");
+    OTSUTSUKI("otsutsuki"),
+    SENJU("senju");
 
     public final String id;
     private final ResourceLocation advancement;

@@ -32,7 +32,7 @@ public final class ClanCommand {
 
         LiteralArgumentBuilder<CommandSourceStack> set = Commands.literal("set")
                 .requires(src -> src.hasPermission(2));
-        // /narutoclans set <jogador> namikaze|otsutsuki
+        // /narutoclans set <jogador> namikaze|otsutsuki|senju
         var playerArg = Commands.argument("player", EntityArgument.player());
         for (Clan clan : Clan.values()) {
             playerArg.then(Commands.literal(clan.id).executes(ctx -> set(ctx.getSource(),

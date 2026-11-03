@@ -116,6 +116,7 @@ public final class ClanManager {
         switch (clan) {
             case NAMIKAZE -> NamikazeClan.onJoin(player);
             case OTSUTSUKI -> OtsutsukiClan.onJoin(player);
+            case SENJU -> SenjuClan.onJoin(player);
         }
 
         player.displayClientMessage(Component.translatable("message.narutoto_clans.joined", clan.displayName())
@@ -133,7 +134,7 @@ public final class ClanManager {
         NarutotoBridge.Vars vars = NarutotoBridge.vars(player);
         if (vars != null) {
             vars.setBoolean("have_clan", false);
-            if (current == Clan.OTSUTSUKI) {
+            if (current == Clan.OTSUTSUKI || current == Clan.SENJU) {
                 vars.setDouble("chakra_maximum", BASE_CHAKRA_MAX);
                 vars.setDouble("chakra", Math.min(vars.getDouble("chakra"), BASE_CHAKRA_MAX));
             }

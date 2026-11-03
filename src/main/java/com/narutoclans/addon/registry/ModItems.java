@@ -21,6 +21,9 @@ public final class ModItems {
     public static final RegistryObject<Item> OTSUTSUKI_CLAN_SCROLL = ITEMS.register("otsutsuki_clan_scroll",
             () -> new ClanScrollItem(Clan.OTSUTSUKI, new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
 
+    public static final RegistryObject<Item> SENJU_CLAN_SCROLL = ITEMS.register("senju_clan_scroll",
+            () -> new ClanScrollItem(Clan.SENJU, new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+
     public static final RegistryObject<Item> CHAKRA_FRUIT = ITEMS.register("chakra_fruit",
             () -> new ChakraFruitItem(new Item.Properties().stacksTo(16).rarity(Rarity.EPIC)
                     .food(new FoodProperties.Builder().nutrition(10).saturationMod(1.2F).alwaysEat().build())));

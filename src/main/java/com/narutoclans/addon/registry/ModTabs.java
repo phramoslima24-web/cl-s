@@ -19,6 +19,7 @@ public final class ModTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.NAMIKAZE_CLAN_SCROLL.get());
                         output.accept(ModItems.OTSUTSUKI_CLAN_SCROLL.get());
+                        output.accept(ModItems.SENJU_CLAN_SCROLL.get());
                         output.accept(ModItems.CHAKRA_FRUIT.get());
                     })
                     .build());

@@ -27,6 +27,13 @@ public final class Config {
     public static final ForgeConfigSpec.IntValue JOGAN_DRAIN_PER_SEC;
     public static final ForgeConfigSpec.IntValue JOGAN_RADIUS;
 
+    // ---- Senju ----
+    public static final ForgeConfigSpec.IntValue SENJU_CHAKRA_MAX;
+    public static final ForgeConfigSpec.DoubleValue SENJU_REGEN_PERCENT_PER_SEC;
+    public static final ForgeConfigSpec.DoubleValue SENJU_EXTRA_HEALTH;
+    public static final ForgeConfigSpec.IntValue SENJU_REGENERATION_LEVEL;
+    public static final ForgeConfigSpec.BooleanValue SENJU_FREE_JUTSUS;
+
     // ---- Fruto de Chakra ----
     public static final ForgeConfigSpec.IntValue FRUIT_CHAKRA_MAX_BONUS;
     public static final ForgeConfigSpec.IntValue FRUIT_ATTRIBUTE_POINTS;
@@ -73,6 +80,19 @@ public final class Config {
                 .defineInRange("joganDrainPerSecond", 100, 0, 2_000_000_000);
         JOGAN_RADIUS = b.comment("Raio (blocos) em que o Jogan revela seres vivos atraves de paredes.")
                 .defineInRange("joganRadius", 48, 4, 256);
+        b.pop();
+
+        b.push("senju");
+        SENJU_CHAKRA_MAX = b.comment("Chakra maximo concedido ao entrar no cla (reservas monstruosas).")
+                .defineInRange("chakraMaximum", 100_000, 1_000, 2_000_000_000);
+        SENJU_REGEN_PERCENT_PER_SEC = b.comment("Regeneracao de chakra por segundo, em % do maximo.")
+                .defineInRange("chakraRegenPercentPerSecond", 0.5D, 0.0D, 100.0D);
+        SENJU_EXTRA_HEALTH = b.comment("Vida maxima extra, em pontos (20 = +10 coracoes). Forca vital do cla.")
+                .defineInRange("extraHealth", 20.0D, 0.0D, 1000.0D);
+        SENJU_REGENERATION_LEVEL = b.comment("Nivel de Regeneracao permanente (0 = desligado, 1 = Regeneracao I...).")
+                .defineInRange("regenerationLevel", 1, 0, 5);
+        SENJU_FREE_JUTSUS = b.comment("Ao entrar no cla, coloca Mokuton (Jukai Kotan, Mokujoheki, Mokusatsu Shibari, Sashiki) e Shosen Jutsu direto no livro de jutsus.")
+                .define("freeJutsus", true);
         b.pop();
 
         b.push("chakraFruit");

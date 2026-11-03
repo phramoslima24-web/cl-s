@@ -6,6 +6,7 @@ import com.narutoclans.addon.clan.Clan;
 import com.narutoclans.addon.clan.ClanManager;
 import com.narutoclans.addon.clan.NamikazeClan;
 import com.narutoclans.addon.clan.OtsutsukiClan;
+import com.narutoclans.addon.clan.SenjuClan;
 import com.narutoclans.addon.command.ClanCommand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
@@ -34,6 +35,7 @@ public final class CommonEvents {
         }
         NamikazeClan.applyPassive(player, ClanManager.has(player, Clan.NAMIKAZE));
         OtsutsukiClan.secondTick(player, ClanManager.has(player, Clan.OTSUTSUKI));
+        SenjuClan.secondTick(player, ClanManager.has(player, Clan.SENJU));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
