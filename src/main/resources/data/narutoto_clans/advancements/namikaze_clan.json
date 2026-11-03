@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "narutoto_clans:namikaze_clan_scroll"
+    },
+    "title": {
+      "translate": "advancements.narutoto_clans.namikaze_clan.title"
+    },
+    "description": {
+      "translate": "advancements.narutoto_clans.namikaze_clan.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "namikaze_clan_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "narutoto:begin"
+}
